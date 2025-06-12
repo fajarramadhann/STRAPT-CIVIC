@@ -8,8 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "postinstall": "npm ls @rollup/rollup-linux-x64-gnu || npm install @rollup/rollup-linux-x64-gnu@^4.40.2 --no-save || true"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@civic/auth-web3": "^0.5.15",
@@ -86,11 +85,6 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
-    "rollup": "^4.40.2",
-    "@rollup/rollup-linux-x64-gnu": "^4.40.2",
-    "@rollup/rollup-darwin-x64": "^4.40.2",
-    "@rollup/rollup-darwin-arm64": "^4.40.2",
-    "@rollup/rollup-win32-x64-msvc": "^4.40.2",
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
