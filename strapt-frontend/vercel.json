@@ -1,8 +1,13 @@
 {
+  "buildCommand": "npm install @rollup/rollup-linux-x64-gnu@^4.40.2 --no-save && npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci --legacy-peer-deps",
+  "framework": "vite",
   "build": {
     "env": {
-      "NPM_FLAGS": "--legacy-peer-deps",
-      "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
+      "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+      "NPM_CONFIG_OPTIONAL": "false",
+      "NODE_OPTIONS": "--max-old-space-size=4096"
     }
   },
   "rewrites": [
