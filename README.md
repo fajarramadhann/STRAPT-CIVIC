@@ -19,7 +19,7 @@ Whether you're splitting a bill, sending an invoice, or running a community give
 
 - **Frontend**: React + TailwindCSS + Wagmi
 - **Smart Contract**: Solidity (Lisk EVM-compatible chain)  
-- **Auth & Wallet**: [Civic](https://www.civic.com/) (Privy-like walletless login)  
+- **Auth & Wallet**: [Civic](https://www.civic.com/) (walletless login)  
 
 ---
 
