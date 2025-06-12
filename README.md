@@ -103,7 +103,7 @@ Whether you're splitting a bill, sending an invoice, or running a community give
 
 ## 🌐 Live Demo
 
-Try it live 👉 [https://strapt.app](https://civic.usestrapt.xyz)  
+Try it live on Lisk testnet👉 https://civic.usestrapt.xyz  
 (Testnet: Lisk L2 Devnet, USDC faucet available inside)
 
 ---
