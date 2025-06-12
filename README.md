@@ -1,123 +1,126 @@
-# Strapt - Secure Transfer and Payment
+# STRAPT 💸  
+**SECURE TRANSFER AND PAYMENT**  
+Built on Lisk L2 | Walletless Experience
 
-Strapt is trustless DeFi platform for protected crypto transfers, savings asset to achieve goals and simple streaming payments with a clean UI and UX.
+![STRAPT Banner](./assets/strapt-banner.png) <!-- optional image -->
 
-## 🌟 Features
+---
 
-- **Core Functionality**
-  - Direct & Protected Transfers
-  - Payment Streaming with Milestones
-  - DeFi Savings & Staking
-  - QR Code Generation & Scanning
-  - Username-based Wallet System
-  - Decentralized Identity Integration
+## 🧠 Overview
 
-- **User Experience**
-  - Beautiful, Responsive UI
-  - Dark/Light Theme Support
-  - Mobile-First Design
-  - Intuitive Navigation
-  - Real-time Balance Updates
+**STRAPT** is a Web3-native P2P secure payment superapp designed for everyone in web2 and web3.  
+We eliminate the usual crypto UX friction and make sending/receiving crypto as easy as scanning a QR code, clicking a link, or using a username.
 
-## 🚀 Getting Started
+Whether you're splitting a bill, sending an invoice, or running a community giveaway, STRAPT provides **secure escrow-protected transfers** with a **walletless UX**.
 
-### Prerequisites
+---
 
-- Node.js (LTS version recommended)
-- Git
+## 🛠 Tech Stack
 
-### Installation
+- **Frontend**: React + TailwindCSS + Wagmi
+- **Smart Contract**: Solidity (Lisk EVM-compatible chain)  
+- **Auth & Wallet**: [Civic](https://www.civic.com/) (walletless login)  
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/strapt.git
-cd strapt
-```
+---
 
-2. Install dependencies:
-```bash
-# Install frontend dependencies
-cd strapt-frontend
-npm install
+## ✨ Key Features
 
-# Install backend dependencies
-cd ../strapt-backend
-npm install
-```
+### 🔒 1. P2P Secure Payment
+- Send money directly to any user’s wallet address
+- Fast, stable, gas-efficient
 
-3. Configure environment variables:
-```bash
-# In strapt-frontend/.env
-VITE_WALLET_CONNECT_PROJECT_ID=your_project_id
-VITE_PRIVY_APP_ID=your_privy_app_id
-```
+### 🧾 2. Escrow Protection
+- Funds are locked until the receiver claims it
+- Supports time-based refund if funds go unclaimed
+- Ideal for marketplace transactions and micro-payments
 
-4. Start the development server:
-```bash
-# Frontend
-npm run dev
+### 🔗 3. Link/QR Transfer
+- Generate shareable payment links
+- Receivers don’t need a wallet upfront
+- Claim flow is done through walletless onboarding (gmail)
 
-# Backend
-npm run dev
-```
+### 🔐 4. Password-Protected Transfers
+- Set a secret password for the receiver to unlock the funds
+- Adds an extra layer of P2P security
 
-## 🛠️ Tech Stack
+### 📤 5. STRAPT Drop
+- Send IDRX to multiple users in a viral drop-style mechanic
+- Each drop link is unique and first-come-first-serve
+- Great for communities, campaigns, and engagement
 
-### Frontend
-- React 18 with TypeScript
-- Vite for blazing-fast development
-- TailwindCSS for styling
-- shadcn/ui for component library
-- wagmi & viem for Web3 interactions
-- RainbowKit for wallet connections
-- React Router for navigation
-- Tanstack Query for data management
+### ⏳ 6. Stream & Milestone Payments *(Alpha)*
+- Send payments in real-time (per second or milestone-based)
+- Useful for freelance gigs, creators, or payout scheduling
 
-### Backend
-- Node.js
-- Express
-- TypeScript
+### 💰 7. Saving Goals *(Coming Soon)*
+- Allocate funds toward specific savings goals while earning passive yield
+- Plug-and-play with DeFi yield sources in the future
 
-## 📱 Features in Detail
+### 🧾 8. Fund Request *(Coming Soon)*
+- Ask for payments from others via username, email, or link
+- Can be used for invoices, donations, or bill splits
 
-### Payment Streaming
-- Create token streams with customizable rates
-- Add milestone-based releases
-- Pause, resume, or stop streams
-- Real-time streaming progress tracking
+---
 
-### Savings & DeFi
-- Multiple protocol integrations
-- APY comparison tools
-- Goal-based savings
-- Auto-compounding options
+## 🔐 Security by Default
 
-### Security
-- Protected transfers with timelock
-- Multi-signature support
-- Transaction verification system
-- Automated security checks
+- All unclaimed funds are **escrowed** on-chain
+- Supports **refunds** and **reclaim mechanism** if receiver doesn't claim
+- Optional **password-layer** for additional protection
+- Lisk L2 ensures fast and cheap finality with less than 1 cent fees
 
-## 🤝 Contributing
+---
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 🧑‍💻 How It Works
 
-## 📄 License
+1. **Sender** creates a transaction:
+   - via username / address / QR / link
+   - optional: password or message
+2. **Receiver** gets the link:
+   - signs in via Gmail (walletless)
+   - claim funds in 1-click
+3. If unclaimed, **Sender** can refund anytime after expiry.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+> STRAPT = Web2 simplicity × Web3 security × IRL use cases.
+
+---
+
+## 🔎 Why STRAPT?
+
+- 🛡 **Secure**: Funds don’t move unless claimed properly
+- 🔗 **Link-based**: Works even if the receiver has no wallet
+- 🚫 **No gas pain**: Lisk L2 is fast, cheap, and IDRX-native
+- 🧠 **Smart UX**: Simple flows designed for mass adoption
+- 🇮🇩 **Localized**: Built around the IDRX stablecoin for Indonesia
+
+---
+
+## 📸 Screenshots
+
+> Soon
+
+---
+
+## 🌐 Live Demo
+
+Try it live on Lisk testnet👉 https://civic.usestrapt.xyz  
+(Testnet: Lisk L2 Testnet, USDC faucet available inside)
+
+---
+
+## 📦 Contracts & Repos
+
+- **Frontend**: `strapt-frontend`    
+- **Smart Contracts**: `strapt-contracts`  
+- **Deployment Scripts**: `scripts/deploy-to-network.sh`
+
 
 ## 🙏 Acknowledgements
 
-- [RainbowKit](https://www.rainbowkit.com/)
+- [Civic](https://civic.com/)
 - [wagmi](https://wagmi.sh/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Privy](https://privy.io/)
-- [Base](https://base.org/)
+- [Lisk L2](https://lisk.com/)
 
 ## 📞 Support
 
-For support, please open an issue in the GitHub repository or contact the team at support@strapt.io
+For support, please open an issue in the GitHub repository or contact the team at `team@usestrapt.xyz`
