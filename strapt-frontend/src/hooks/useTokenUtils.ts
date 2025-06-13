@@ -7,7 +7,7 @@ import USDCABI from '@/contracts/USDCMock.json';
 import IDRXABI from '@/contracts/IDRX.json';
 import contractConfig from '@/contracts/contract-config.json';
 import { readContract, writeContract } from 'wagmi/actions';
-import { config } from '@/providers/WagmiConfig';
+import { config } from '@/providers/wagmiConfig';
 
 // Export token addresses and decimals as constants
 export const USDC_ADDRESS = USDCABI.address as `0x${string}`;
