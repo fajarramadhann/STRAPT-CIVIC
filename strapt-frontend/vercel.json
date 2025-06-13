@@ -2,7 +2,7 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm ci --legacy-peer-deps",
+  "installCommand": "npm install --legacy-peer-deps",
   "build": {
     "env": {
       "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
