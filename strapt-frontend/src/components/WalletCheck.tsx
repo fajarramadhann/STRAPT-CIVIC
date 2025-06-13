@@ -9,27 +9,27 @@ const WalletCheck = () => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
 
-  // Just check connection status without trying to connect
+  // Give more time for auto-connection to happen
   useEffect(() => {
-    // Short timeout to ensure wallet state is properly loaded
+    // Longer timeout to ensure wallet auto-connection completes
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 100);
+    }, 2000); // Increased from 100ms to 2000ms
 
     return () => clearTimeout(timer);
   }, []);
 
-  // If loading, show loading screen
+  // Keep showing loading screen while connection is being established
   if (isLoading) {
     return <LoadingScreen />;
   }
 
-  // If not connected, prevent access to the app
+  // Only redirect to home if definitely not connected after loading
   if (!isConnected) {
     return <Navigate to="/" state={{ from: location }} replace />;
   }
 
-  // If connected, render the children
+  // If connected, render the protected content
   return <Outlet />;
 };
 

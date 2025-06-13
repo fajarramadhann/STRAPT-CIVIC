@@ -1,4 +1,3 @@
-
 import { Suspense, lazy } from "react";
 import { Toaster as Sonner } from "sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -80,7 +79,7 @@ const App = () => {
                   <Route path="claim/:id?" element={<Navigate to="/app/claims" replace />} />
 
                   {/* Protected routes require wallet connection */}
-                  <Route element={<WalletCheck />}>
+                  {/* <Route element={<WalletCheck />}> */}
                     <Route path="app" element={isMobile ? <Layout /> : <DesktopLayout />}>
                       <Route index element={
                         <Suspense fallback={<PageLoading />}>
@@ -122,6 +121,11 @@ const App = () => {
                           <StraptDropClaim />
                         </Suspense>
                       } />
+                      <Route path="strapt-drop/claim" element={
+                        <Suspense fallback={<PageLoading />}>
+                          <StraptDropClaim />
+                        </Suspense>
+                      } />
                       <Route path="strapt-drop/my-drops" element={
                         <Suspense fallback={<PageLoading />}>
                           <MyDrops />
@@ -143,7 +147,7 @@ const App = () => {
                         </Suspense>
                       } />
                     </Route>
-                  </Route>
+                  {/* </Route> */}
                   <Route path="*" element={
                     <Suspense fallback={<PageLoading />}>
                       <NotFound />

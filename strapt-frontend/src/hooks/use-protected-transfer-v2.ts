@@ -77,7 +77,8 @@ export function useProtectedTransferV2() {
 
       // Import necessary functions
       const { readContract } = await import('wagmi/actions');
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
+  
 
       // Read allowance
       const allowance = await readContract(config, {
@@ -156,7 +157,7 @@ export function useProtectedTransferV2() {
       setIsLoading(true);
       
       // Import config for wagmi actions
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const { getAccount, writeContract: writeContractAction } = await import('wagmi/actions');
       const account = getAccount(config);
 
@@ -268,7 +269,7 @@ export function useProtectedTransferV2() {
 
       // Get the account
       const { getAccount, simulateContract, writeContract: writeContractAction } = await import('wagmi/actions');
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const account = getAccount(config);
 
       if (!account || !account.address) {
@@ -402,7 +403,7 @@ export function useProtectedTransferV2() {
       setIsLoading(true);
 
       // Import config for wagmi actions
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const { getAccount, writeContract: writeContractAction } = await import('wagmi/actions');
       const account = getAccount(config);
 
@@ -501,7 +502,7 @@ export function useProtectedTransferV2() {
       setIsLoading(true);
 
       // Import config for wagmi actions
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const { getAccount, simulateContract, writeContract: writeContractAction } = await import('wagmi/actions');
       const account = getAccount(config);
 
@@ -573,7 +574,7 @@ export function useProtectedTransferV2() {
   const getTransferDetails = async (transferId: string): Promise<Transfer | null> => {
     try {
       // Import config for wagmi actions
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const { readContract } = await import('wagmi/actions');
 
       console.log('Getting transfer details for ID:', transferId);
@@ -675,7 +676,7 @@ export function useProtectedTransferV2() {
   const isTransferClaimable = async (transferId: string): Promise<boolean> => {
     try {
       // Import config for wagmi actions
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const { readContract } = await import('wagmi/actions');
 
       console.log('Checking if transfer is claimable:', transferId);
@@ -700,7 +701,7 @@ export function useProtectedTransferV2() {
   const getRecipientTransfers = async (recipientAddress: string): Promise<string[]> => {
     try {
       // Import config for wagmi actions
-      const { config } = await import('@/providers/CivicProvider');
+      const { config } = await import('@/providers/wagmiConfig');
       const { readContract } = await import('wagmi/actions');
 
       console.log('Getting transfers for recipient:', recipientAddress);
